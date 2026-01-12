@@ -15,3 +15,18 @@ app.use(express.json);
 app.get('/', (req,res)=>{
     res.send('<h1>Store API</h1><a href="/api/v1/products"> Products route</a>')
 })
+
+// Products route
+
+app.use(notFoundMiddleware)
+app.use(errorMiddleware)
+
+const port = process.env.PORT || 3000
+
+const start = async()=>{
+    try{
+        app.listen(port, console.log(`Server is listening port ${port}  `))
+    } catch(err){
+
+    } 
+}
