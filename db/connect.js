@@ -1,7 +1,7 @@
-const moogoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const connectDB = (url)=>{
-    return moogoose.connect(url,{
+    return mongoose.connect(url,{
         userNewUrlParser:true,
         useCreateIndex: true,
         useFindAndModify: false,
