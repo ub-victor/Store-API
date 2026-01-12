@@ -18,8 +18,8 @@ app.get('/', (req,res)=>{
 
 // Products route
 
-app.use(notFoundMiddleware)
-app.use(errorMiddleware)
+app.use(notFoundMiddleware);
+app.use(errorMiddleware);
 
 const port = process.env.PORT || 3000
 
