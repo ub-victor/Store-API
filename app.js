@@ -8,7 +8,7 @@ const errorMiddleware = require('./middleware/error-handler');
 
 // express middleware
 
-app.use(express.json);
+app.use(express.json());
 
 //routes
 
