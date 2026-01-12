@@ -32,3 +32,5 @@ const start = async()=>{
     } 
 }
 
+start();
+
