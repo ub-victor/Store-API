@@ -8,6 +8,7 @@ const getAllProductsStatic = async (req, res)=>{
 }
 
 const getAllProducts = async (req, res)=>{
+    // This line is equivalent to const featured = req.query.featured;
     const {featured} = req.query;
     const queryObject ={}
     if (featured){
