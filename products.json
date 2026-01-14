@@ -119,7 +119,7 @@
   {
     "name": "wooden table",
     "price": 23,
-    "featured": true,
+    "featured": false,
     "company": "caressa"
   },
   {
