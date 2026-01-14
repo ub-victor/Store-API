@@ -23,6 +23,6 @@ const productSchema = new mongoose.Schema({
     },
     company:{
         type: String,
-        enum: ["Ikea", "Liddy", "Caressa", "marcos"]
+        enum: ["Ikea", "Liddy", "Caressa", "marcos"]// enum is used to restrict values which means only these values are allowed
     }
 }) 
