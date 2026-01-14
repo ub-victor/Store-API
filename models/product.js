@@ -23,6 +23,10 @@ const productSchema = new mongoose.Schema({
     },
     company:{
         type: String,
-        enum: ["Ikea", "Liddy", "Caressa", "marcos"]// enum is used to restrict values which means only these values are allowed
+        //enum: ["Ikea", "Liddy", "Caressa", "marcos"]// enum is used to restrict values which means only these values are allowed
+        enum:{
+            values: ["Ikea", "Liddy", "Caressa", "marcos"],
+            message: '{VALUE} is not supported' // custom error message
+        }
     }
 }) 
