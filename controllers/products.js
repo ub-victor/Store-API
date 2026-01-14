@@ -8,7 +8,8 @@ const getAllProductsStatic = async (req, res)=>{
 }
 
 const getAllProducts = async (req, res)=>{
-    res.status(200).json({msg: 'products route'})
+    const products = await Product.find(req.query);
+    res.status(200).json({msg: 'products route'});
 }
 
 module.exports = {getAllProducts, getAllProductsStatic}
