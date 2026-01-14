@@ -21,6 +21,10 @@ app.get('/', (req,res)=>{
 
 
 // Products route
+/*
+“For every request that starts with /api/v1/products,
+send it to productsRouter”
+*/
 app.use('/api/v1/products', productsRouter)
 
 app.use(notFoundMiddleware);
