@@ -8,5 +8,5 @@ const productSchema = new mongoose.Schema({
     price: {
         type: Number,
         required: [true, 'Product price must be provided']
-    }
+    },
 }) 
