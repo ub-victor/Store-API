@@ -14,7 +14,7 @@ const getAllProducts = async (req, res)=>{
         queryObject.featured = featured == 'true' ? true: false;
     }
     // Here we to not use the {} because  req.query is already an object 
-    const products = await Product.find(req.query);
+    const products = await Product.find(queryObject);
     res.status(200).json({products, nbHits: products.length});
 }
 
