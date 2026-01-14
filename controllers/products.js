@@ -8,7 +8,7 @@ const getAllProductsStatic = async (req, res)=>{
 }
 
 const getAllProducts = async (req, res)=>{
-    
+    const {featured} = req.query;
     // Here we to not use the {} because  req.query is already an object 
     const products = await Product.find(req.query);
     res.status(200).json({products, nbHits: products.length});
