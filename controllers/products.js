@@ -19,11 +19,11 @@ const getAllProducts = async (req, res)=>{
         // Search products whose name contains the given text (case-insensitive)
         queryObject.name = {$regex: name, $options: 'i'};
     }
+    let result = products.find(queryObject);
+    console.log(queryObject);
     if (sort){
-        let result = products.find(queryObject);
+        
     }
-
-    console.log(queryObject)
     // Here we to not use the {} because  req.query is already an object 
     const products = await Product.find(queryObject);
     // the above line is traslated by the db like this db.products.find({ featured: true })
