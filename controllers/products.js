@@ -20,13 +20,13 @@ const getAllProducts = async (req, res)=>{
         queryObject.name = {$regex: name, $options: 'i'};
     }
     let result = Product.find(queryObject);
-    //console.log(queryObject);
     if (sort){
         const sortList = sort.split(',').join(' ');
         result = result.sort(sortList); 
     }else{
         result = result.sort('createAt');
     }
+    console.log(queryObject);
 
     const products = await result;
     // Here we to not use the {} because  req.query is already an object 
