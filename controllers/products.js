@@ -29,6 +29,8 @@ const getAllProducts = async (req, res)=>{
     }
 
     console.log(queryObject);
+    console.log('sort:', sort);
+    console.log('sortList:', sortList);
 
     const products = await result;
     // Here we to not use the {} because  req.query is already an object 
