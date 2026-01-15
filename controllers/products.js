@@ -19,7 +19,7 @@ const getAllProducts = async (req, res)=>{
         // Search products whose name contains the given text (case-insensitive)
         queryObject.name = {$regex: name, $options: 'i'};
     }
-    let result = products.find(queryObject);
+    let result = Products.find(queryObject);
     console.log(queryObject);
     console.log(result)
     if (sort){
