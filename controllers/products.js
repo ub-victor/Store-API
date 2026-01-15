@@ -21,7 +21,7 @@ const getAllProducts = async (req, res)=>{
     }
     let result = Products.find(queryObject);
     console.log(queryObject);
-    //console.log(result)
+    console.log(result)
     if (sort){
         console.log(sort())
     }
