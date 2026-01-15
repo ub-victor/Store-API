@@ -21,8 +21,10 @@ const getAllProducts = async (req, res)=>{
     }
     let result = Product.find(queryObject);
 
+    let sortList;
+
     if (sort && sort.trim() !== '') {
-    const sortList = sort.split(',').join(' ');
+    sortList = sort.split(',').join(' ');
     result = result.sort(sortList);
     } else {
     result = result.sort('createdAt');
