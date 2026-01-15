@@ -30,6 +30,10 @@ const getAllProducts = async (req, res)=>{
     result = result.sort('createdAt');
     }
 
+    if(fields){
+        const fieldSelect = sort.split(',').join(' ');        
+    }
+
     console.log(queryObject);
     console.log('sort:', sort);
     console.log('sortList:', sortList);
