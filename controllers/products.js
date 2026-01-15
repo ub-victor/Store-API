@@ -17,6 +17,9 @@ const getAllProducts = async (req, res)=>{
     if (company){
         queryObject.company = company;
     }
+    if (name){
+        queryObject.name = name;
+    }
 
     console.log(queryObject)
     // Here we to not use the {} because  req.query is already an object 
