@@ -24,8 +24,10 @@ const getAllProducts = async (req, res)=>{
     if (sort){
         products = products.sort()
     }
+
+    const products = await result;
     // Here we to not use the {} because  req.query is already an object 
-    const products = await Product.find(queryObject);
+    //const products = await Product.find(queryObject);
     // the above line is traslated by the db like this db.products.find({ featured: true })
     res.status(200).json({products, nbHits: products.length});
 }
