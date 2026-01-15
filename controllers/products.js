@@ -16,6 +16,7 @@ const getAllProducts = async (req, res)=>{
     }
     if (company){ 
         queryObject.company = company; 
+        
     }
 
     console.log(queryObject)
