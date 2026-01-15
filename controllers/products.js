@@ -2,14 +2,14 @@ const Product = require('../models/product');
 
 const getAllProductsStatic = async (req, res)=>{
    const products = await Product.find({
-    name: '2'
+    name: 'entertainment center'
    })
     res.status(200).json({products, nbHits: products.length});
 }
 
 const getAllProducts = async (req, res)=>{
     // This line is equivalent to const featured = req.query.featured;
-    const {featured, company} = req.query;
+    const {featured, company, name} = req.query;
     const queryObject ={}
     if (featured){
         queryObject.featured = featured == 'true' ? true: false;
