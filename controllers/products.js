@@ -28,7 +28,7 @@ const getAllProducts = async (req, res)=>{
     result = result.sort(sortList);
     } else {
     result = result.sort('createdAt');
-    }
+    } 
 
     if(fields){
         const fieldSelect = sort.split(',').join(' ');        
