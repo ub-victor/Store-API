@@ -22,7 +22,7 @@ const getAllProducts = async (req, res)=>{
     let result = products.find(queryObject);
     console.log(queryObject);
     if (sort){
-        
+        products = products.sort()
     }
     // Here we to not use the {} because  req.query is already an object 
     const products = await Product.find(queryObject);
