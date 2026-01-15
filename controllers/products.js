@@ -19,6 +19,10 @@ const getAllProducts = async (req, res)=>{
         // Search products whose name contains the given text (case-insensitive)
         queryObject.name = {$regex: name, $options: 'i'};
     }
+    if (sort){
+        // Search products whose name contains the given text (case-insensitive)
+        queryObject.sort = {$regex: name, $options: 'i'};
+    }
 
     console.log(queryObject)
     // Here we to not use the {} because  req.query is already an object 
