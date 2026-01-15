@@ -19,6 +19,7 @@ const getAllProducts = async (req, res)=>{
         queryObject.company = company;
     }
     if (name){
+        // Search products whose name contains the given text (case-insensitive)
         queryObject.name = {$regex: name, $options: 'i'};
     }
 
