@@ -31,7 +31,7 @@ const getAllProducts = async (req, res)=>{
     }
 
     if(fields){
-        const fieldsSelect = fields.split(',').join(' ');    
+        const fieldsSelect = fields.split(',').join(' ');   
     }
 
     console.log(queryObject);
