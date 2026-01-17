@@ -32,10 +32,10 @@ const getAllProducts = async (req, res)=>{
 
     if(fields){
         const fieldsSelect = fields.split(',').join(' ');
-    }
+    } 
 
     console.log(queryObject);
-    console.log('sort:', sort); 
+    console.log('sort:', sort);
     console.log('sortList:', sortList);
 
     const products = await result;
