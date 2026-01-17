@@ -35,7 +35,7 @@ const getAllProducts = async (req, res)=>{
     }
 
     console.log(queryObject);
-    console.log('sort:', sort);
+    console.log('sort:', sort); 
     console.log('sortList:', sortList);
 
     const products = await result;
