@@ -30,7 +30,7 @@ const getAllProducts = async (req, res)=>{
     result = result.sort('createdAt');
     }
 
-    if(fields){ 
+    if(fields){
         const fieldsSelect = fields.split(',').join(' ');
     } 
 
