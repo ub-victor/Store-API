@@ -45,4 +45,4 @@ const getAllProducts = async (req, res)=>{
     res.status(200).json({products, nbHits: products.length});
 }
 
-module.exports = {getAllProducts, getAllProductsStatic};
+module.exports = {getAllProducts, getAllProductsStatic}; 
