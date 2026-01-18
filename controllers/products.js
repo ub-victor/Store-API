@@ -44,7 +44,7 @@ const getAllProducts = async (req, res)=>{
     const skip = (page -1) * limit;
 
     result = result.skip(skip).limit(limit);
-    //23
+    //23 products , if we decide to limite it to 7, we will have 4 pages 
     console.log(queryObject);
     console.log('sort:', sort);
     console.log('sortList:', sortList);
