@@ -43,7 +43,7 @@ const getAllProducts = async (req, res)=>{
     const limit = Number(req.query.limit) || 10;
     const skip = (page -1) * limit;
 
-    result = result.skip(skip).limit(limit);
+    result = result.skip(skip).limit(limit); 
 
     console.log(queryObject);
     console.log('sort:', sort);
