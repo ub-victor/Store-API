@@ -46,4 +46,3 @@ const getAllProducts = async (req, res)=>{
 }
 
 module.exports = {getAllProducts, getAllProductsStatic};
-//4h35
