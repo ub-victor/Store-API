@@ -37,7 +37,9 @@ const getAllProducts = async (req, res)=>{
     if(fields){
         const fieldsList = fields.split(',').join(' ');
         result= result.select(fieldsList);
-    } 
+    }
+    
+    
 
     console.log(queryObject);
     console.log('sort:', sort);
