@@ -39,7 +39,7 @@ const getAllProducts = async (req, res)=>{
         result= result.select(fieldsList);
     }
     
-    
+    const page = Number(req.query.page) || 1
 
     console.log(queryObject);
     console.log('sort:', sort);
