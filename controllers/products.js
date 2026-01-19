@@ -40,7 +40,6 @@ const getAllProducts = async (req, res)=>{
             '>': '$gt',
             '>': '$gt',
             '>': '$gt'
-            
         }
     }
 
