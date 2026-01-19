@@ -25,6 +25,7 @@ const getAllProducts = async (req, res) => {
   }
 
   // name search
+  // Search products whose name contains the given text (case-insensitive)
   if (name) {
     queryObject.name = { $regex: name, $options: 'i' };
   }
