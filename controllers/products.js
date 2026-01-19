@@ -35,7 +35,6 @@ const getAllProducts = async (req, res)=>{
     }
     if(numericFilters){
         console.log(numericFilters)
-
     }
 
 
