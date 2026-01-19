@@ -35,6 +35,11 @@ const getAllProducts = async (req, res)=>{
     }
     if(numericFilters){
         const operatorMap = {
+            '>': '$gt',
+            '>': '$gt',
+            '>': '$gt',
+            '>': '$gt',
+            '>': '$gt'
             
         }
     }
