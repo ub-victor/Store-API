@@ -50,7 +50,7 @@ const getAllProducts = async (req, res)=>{
         filters = filters.split(',').forEach(item => {
             const [field, operator, values] = item.split('-')
             if(options.includes(field)){
-                queryObject[field] = {[operator]}
+                queryObject[field] = {[operator]: Number(value)}
             }
         });
 
