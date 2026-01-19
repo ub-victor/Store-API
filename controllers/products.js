@@ -36,14 +36,14 @@ const getAllProducts = async (req, res)=>{
     if(numericFilters){
         const operatorMap = {
             '>': '$gt',
-            '>': '$gte',
-            '>': '$eq',
-            '>': '$lt',
-            '>': '$lte'
+            '>=': '$gte',
+            '=': '$eq',
+            '<': '$lt',
+            '<=': '$lte'
         }
         const regEx = /\b(<|>=|=|=<)\b/g 
         const fielters = numericFilters.replace(regEx,(match)=>{
-            
+
         });
 
         console.log(numericFilters);
