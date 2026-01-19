@@ -49,7 +49,9 @@ const getAllProducts = async (req, res)=>{
         const options = ['price', 'ration']
         filters = filters.split(',').forEach(item => {
             const [field, operator, values] = item.split('-')
-            if(options.inc)
+            if(options.includes(field)){
+                queryObject[field] = {[operator]}
+            }
         });
 
         console.log(numericFilters);
