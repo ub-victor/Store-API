@@ -33,6 +33,38 @@ const getAllProducts = async (req, res)=>{
         // Search products whose name contains the given text (case-insensitive)
         queryObject.name = {$regex: name, $options: 'i'};
     }
+
+      // numeric filters
+    if (numericFilters) {
+        const operatorMap = {
+        '>': '$gt',
+        '>=': '$gte',
+        '=': '$eq',
+        '<': '$lt',
+        '<=': '$lte',
+        };
+
+        const regEx = /\b(<|>|<=|>=|=)\b/g;
+        let filters = numericFilters.replace(
+        regEx,
+        (match) => `-${operatorMap[match]}-`
+        );
+
+        const options = ['price', 'rating'];
+
+        filters.split(',').forEach((item) => {
+        const [field, operator, value] = item.split('-');
+        if (options.includes(field)) {
+            queryObject[field] = { [operator]: Number(value) };
+        }
+        });
+    }
+
+  let result = Product.find(queryObject);
+
+  const products = await result;
+  res.status(200).json({ products, nbHits: products.length });
+};
     
 
 
