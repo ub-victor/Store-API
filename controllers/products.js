@@ -41,8 +41,8 @@ const getAllProducts = async (req, res)=>{
             '>': '$lt',
             '>': '$lte'
         }
-        const fielters = numericFilters;
         const regEx = /\b(<|>=|=|=<)\b/g 
+        const fielters = numericFilters;
 
         console.log(numericFilters);
     }
