@@ -42,11 +42,11 @@ const getAllProducts = async (req, res)=>{
             '<=': '$lte'
         }
         const regEx = /\b(<|>=|=|=<)\b/g 
-        let fielters = numericFilters.replace(
+        let filters = numericFilters.replace(
             regEx,
             (match)=>`-${operatorMap[match]}-`
         );
-        filters = fielters.split(',').forEach(item => {
+        filters = filters.split(',').forEach(item => {
             const [field, operator, values] = item.split('-')
         });
 
