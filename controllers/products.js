@@ -46,8 +46,10 @@ const getAllProducts = async (req, res)=>{
             regEx,
             (match)=>`-${operatorMap[match]}-`
         );
+        const options = ['price', 'ration']
         filters = filters.split(',').forEach(item => {
             const [field, operator, values] = item.split('-')
+            if(options.inc)
         });
 
         console.log(numericFilters);
