@@ -41,6 +41,10 @@ const getAllProducts = async (req, res) => {
     };
 
     const regEx = /\b(<|>|<=|>=|=)\b/g;
+    /*
+    Take the original numericFilters string and replace every operator match with a dash-wrapped MongoDB operator:
+    Example: "price>100,rating>=4" with the operator ">" becomes "price-$gt-100" (if that was the only occurrence).
+    */
     let filters = numericFilters.replace(
       regEx,
       (match) => `-${operatorMap[match]}-`
