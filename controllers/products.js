@@ -7,6 +7,16 @@ const getAllProductsStatic = async (req, res)=>{
     .limit(4)
     .skip(1);
     res.status(200).json({products, nbHits: products.length});
+    /*
+    Common related operators:
+
+        $lt: less than
+        $lte: less than or equal to
+        $eq: equal to
+        $ne: not equal to
+        $in: in a list of values
+        $nin: not in a list of values
+    */
 }
 
 const getAllProducts = async (req, res)=>{
