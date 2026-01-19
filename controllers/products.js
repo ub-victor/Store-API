@@ -6,7 +6,7 @@ const getAllProductsStatic = async (req, res)=>{
     // .select('name price')
     // .limit(4)
     // .skip(1);
-    // res.status(200).json({products, nbHits: products.length});
+    res.status(200).json({products, nbHits: products.length});
 }
 
 const getAllProducts = async (req, res)=>{
