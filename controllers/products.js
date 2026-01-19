@@ -2,7 +2,7 @@ const Product = require('../models/product');
 
 const getAllProductsStatic = async (req, res)=>{
     const products = await Product.find({})
-    // .sort('name')
+    .sort('price')
     .select('name price')
     // .limit(4)
     // .skip(1);
