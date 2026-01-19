@@ -21,7 +21,7 @@ const getAllProductsStatic = async (req, res)=>{
 
 const getAllProducts = async (req, res)=>{
     // This line is equivalent to const featured = req.query.featured;
-    const {featured, company, name, sort, fields} = req.query;
+    const {featured, company, name, sort, fields,numericFilters } = req.query;
     const queryObject ={}
     if (featured){
         queryObject.featured = featured == 'true' ? true: false;
