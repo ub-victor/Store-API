@@ -44,7 +44,11 @@ const getAllProducts = async (req, res)=>{
         const regEx = /\b(<|>=|=|=<)\b/g 
         const fielters = numericFilters.replace(
             regEx,
-            (match)=>`-${operatorMap[match]}-`);
+            (match)=>`-${operatorMap[match]}-`
+        );
+        filters = fielters.split(',').forEach(item => {
+            const [] = item.split()
+        });
 
         console.log(numericFilters);
     }
